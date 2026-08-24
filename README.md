@@ -60,12 +60,6 @@ dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhance
 dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git#v1.0.0"
 ```
 
-### npm安装
-
-```sh
-dsh plugin --profile web add @dsh/message-enhancer
-```
-
 ### 本地开发
 
 ```sh
