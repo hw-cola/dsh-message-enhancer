@@ -45,11 +45,47 @@ DSH Web 聊天增强插件，提供四组能力：
 - 仅编辑文本内容，图片不随消息回带；编辑中的输入内容会被暂存，DSH 重渲染气泡时自动重建，不会丢字。
 
 ## 安装
-### 本地
+
+前置要求：本机已安装 [dsh](https://github.com/deepseek-ai/deepseek-harness) 与 [pnpm](https://pnpm.io/)（`dsh plugin` 通过 pnpm 安装插件）。
+
+### 他人安装（GitHub 直装）
+
+```sh
+dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git"
+```
+
+钉到指定版本（按 tag 锁定）：
+
+```sh
+dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git#v1.8.0"
+```
+
+### 他人安装（npm）
+
+```sh
+dsh plugin --profile web add @dsh/message-enhancer
+```
+
+### 本地开发
+
 ```sh
 dsh plugin --profile web add "link:${PATH}/dsh-message-enhancer"
 ```
+
 > `${PATH}`为下载源码的路径
+
+## 更新
+
+```sh
+dsh plugin --profile web update @dsh/message-enhancer
+```
+
+若 pnpm 对 git 依赖的更新不生效，先卸载再重新安装：
+
+```sh
+dsh plugin --profile web remove @dsh/message-enhancer
+dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git"
+```
 
 ## 卸载
 
@@ -57,4 +93,6 @@ dsh plugin --profile web add "link:${PATH}/dsh-message-enhancer"
 dsh plugin --profile web remove @dsh/message-enhancer
 ```
 
-卸载后刷新页面即可恢复原生布局。
+安装后请重启 `dsh web`（让插件的 cordis 补丁层生效）并刷新浏览器页面；卸载后刷新页面即可恢复原生布局。
+
+> 兼容性：插件在 DSH `0.1.1-rc.2` 上开发测试。客户端 API 仍在迭代，DSH 大版本升级后若功能异常，请检查本仓库是否有对应适配版本。
