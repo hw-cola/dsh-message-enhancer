@@ -1,0 +1,8 @@
+# @dsh/message-enhancer - conversation message and plan index.
+#
+# Client-only Web plugin. It adds a small index beside the conversation input
+# and leaves the native chat flow and history pagination in control of DSH.
+
+- insert:
+    - id: message-enhancer
+      name: '@dsh/message-enhancer'
