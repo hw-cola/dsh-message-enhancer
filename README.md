@@ -48,7 +48,7 @@ DSH Web 聊天增强插件，提供四组能力：
 
 前置要求：本机已安装 [dsh](https://github.com/deepseek-ai/deepseek-harness) 与 [pnpm](https://pnpm.io/)（`dsh plugin` 通过 pnpm 安装插件）。
 
-### 他人安装（GitHub 直装）
+### GitHub 直装
 
 ```sh
 dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git"
@@ -57,10 +57,10 @@ dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhance
 钉到指定版本（按 tag 锁定）：
 
 ```sh
-dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git#v1.8.0"
+dsh plugin --profile web add "git+https://github.com/hw-cola/dsh-message-enhancer.git#v1.0.0"
 ```
 
-### 他人安装（npm）
+### npm安装
 
 ```sh
 dsh plugin --profile web add @dsh/message-enhancer

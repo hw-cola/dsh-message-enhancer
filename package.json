@@ -1,7 +1,7 @@
 {
   "name": "@dsh/message-enhancer",
   "description": "DSH Web 聊天增强：消息索引定位、计划审批卡、历史计划卡、回复完成提醒与最后一条消息编辑重发。",
-  "version": "1.8.0",
+  "version": "1.0.0",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
